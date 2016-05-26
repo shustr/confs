@@ -2,3 +2,15 @@
 
 # Error Page
 ErrorDocument 404 /404-error.html
+
+# Disable directory listing
+
+Options -Indexes
+
+# Prevent viewing of htaccess file
+
+<Files ~ "^\.ht">
+order Allow,Deny
+Deny from all
+satisty all
+</Files>
