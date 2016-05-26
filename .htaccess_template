@@ -1,0 +1,4 @@
+# this is template for .htaccess file
+
+# Error Page
+ErrorDocument 404 /404-error.html
