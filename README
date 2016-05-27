@@ -1,6 +1,6 @@
-# /shustr/httpd repo contains  templates for httpd (Apache) server.
-# With CentOS7/RHEL7 in mind.
-#
-# VirtHostTemplate.conf		- virtual host conf file template (located in /sites-available/)
-# .htaccess			- more or less required settings for .htaccess
-# httpd.conf			- httpd.conf with needed settings only
+ /shustr/httpd contains  templates for httpd (Apache) server.
+ With CentOS7/RHEL7 in mind.
+
+ VirtHostTemplate.conf		- virtual host conf file template (located in /sites-available/)
+ .htaccess			- more or less required settings for .htaccess
+ httpd.conf			- httpd.conf with needed settings only
