@@ -1,8 +1,10 @@
 # mutt configuration file to use with Gmail
+# This setup would ask password when receive and send emails.
+#
 # - create related folders
 # - change 'user' with your gmail username
-# - Change Firstname Lastname with preferred displayed name
-#
+# - change Firstname Lastname with preferred displayed name
+# - enjoy :-)
 
 set ssl_starttls=yes
 set ssl_force_tls=yes
