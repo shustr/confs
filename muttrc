@@ -1,0 +1,22 @@
+# mutt configuration file to use with Gmail
+# - create related folders
+# - change 'user' with your gmail username
+# - Change Firstname Lastname with preferred displayed name
+#
+
+set ssl_starttls=yes
+set ssl_force_tls=yes
+set imap_user = "user@gmail.com"
+set imap_pass = ""
+set from="user@gmail.com"
+set realname="Firstname Lastname"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "imaps://imap.gmail.com/INBOX"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+set smtp_url = "smtps://user@gmail.com@smtp.gmail.com:465/"
+set smtp_pass=""
+set move = no
+set imap_keepalive = 900
