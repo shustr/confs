@@ -22,3 +22,8 @@ set smtp_url = "smtps://user@gmail.com@smtp.gmail.com:465/"
 set smtp_pass=""
 set move = no
 set imap_keepalive = 900
+set mail_check = 5
+set timeout = 10
+set sort_aux = last-date-received
+set sort = threads
+set sort_re
