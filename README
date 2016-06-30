@@ -4,3 +4,4 @@
  VirtHostTemplate.conf		- virtual host conf file template (located in /sites-available/)
  .htaccess			- more or less required settings for .htaccess
  httpd.conf			- httpd.conf with needed settings only
+
