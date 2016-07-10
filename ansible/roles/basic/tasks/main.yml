@@ -1,0 +1,17 @@
+---
+- name: remove previously installed wget
+  yum: name=wget state=absent  
+  
+- name: Install latest version of Apache
+  yum: name=httpd state=latest update_cache=true
+
+- name: create empty file with specified permissions
+  file: path=/home/ec2-user/file2.txt state=touch owner=ec2-user mode=0600  
+
+- name: change file with template in Apache and use handler to restart it after
+  template: src=templates/userdir.conf dest=/etc/httpd/conf.d/userdir.conf  
+  notify:
+  - restart apache
+
+- name: Keep apache enabled and running
+  service: name=httpd state=started enabled=yes  
