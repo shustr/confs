@@ -1,0 +1,34 @@
+#Fortigate Example of VPN configuration to keep VPN reconnected after power outage or reboot
+
+RouterName $ config vpn ipsec phase2-interface 
+RouterName (phase2-interface) $ edit "VPN1"
+RouterName (VPN1) $ set auto-negotiate enable
+RouterName (VPN1) $ set keepalive enable
+RouterName (VPN1) $ end
+RouterName $ config vpn ipsec phase2-interface
+RouterName (phase2-interface) $ edit "VPN2"
+RouterName (VPN2) $ set auto-negotiate enable
+RouterName (VPN2) $ set keepalive enable
+RouterName (VPN2) $ end
+
+RouterName $ show vpn ipsec phase2-interface 
+config vpn ipsec phase2-interface
+    edit "VPN1"
+        set phase1name "VPN1"
+        set keepalive enable
+        set auto-negotiate enable
+        set comments "VPN: VPN1 (Created by VPN wizard)"
+        set src-subnet 192.168.1.0 255.255.255.0
+        set dst-subnet 192.168.2.0 255.255.255.0
+    next 
+    edit "VPN2"
+        set phase1name "VPN2"
+        set proposal aes128-sha1
+        set dhgrp 14
+        set keepalive enable
+        set auto-negotiate enable
+        set comments "VPN2 Connection"
+        set src-subnet 192.168.1.0 255.255.255.0
+        set dst-subnet 192.168.2.0 255.255.255.0
+    next 
+end 
