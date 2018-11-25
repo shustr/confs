@@ -1,4 +1,4 @@
- /shustr/httpd contains  templates for httpd (Apache) server.
+ /shustr/confs contains some simple config templates
  With CentOS7/RHEL7 in mind.
 
  VirtHostTemplate.conf		- virtual host conf file template (located in /sites-available/)
